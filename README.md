@@ -29,7 +29,7 @@ While there are plugins and other schedulers available, this is a personal proje
 
 # Progress
 ## Changelog
-### 31_01_2022
+### 1. 31_01_2022
 Built a skeleton code that uses a variety of Python libraries to execute tasks on IG story: (1) Login, (2) Close pop-ups/notifications, (3) Select and upload image of interest
 
 # Tasks at hand
