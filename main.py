@@ -95,13 +95,13 @@ pyautogui.press('backspace',interval=1)
 # time.sleep(1)
 # keyboard.press_and_release('backspace')
 # time.sleep(1)
-pyautogui.write('C:\\Users\\bennb\\OneDrive\\Desktop')
+pyautogui.write('file_path_to_Desktop')
 time.sleep(1)
 pyautogui.press('enter')
 
 pyautogui.press('F6', presses=6, interval=0.5)
 
-pyautogui.write('yoda.jpg')
+pyautogui.write('name_of_meme.jpg')
 pyautogui.press('enter')
 
 # print('Execute experimental path')
