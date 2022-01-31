@@ -30,8 +30,11 @@ Hence the idea - create an ETL automated pipeline that schedules meme uploads to
 Built a skeleton code that uses a variety of Python libraries to execute tasks on IG story: (1) Login, (2) Close pop-ups/notifications, (3) Select and upload image of interest
 
 # Tasks at hand
-## Extract
+## Preparation
+- [ ] Compile my personal memes (from various sources) into one folder
 - [ ] Create IMGUR account
+- [ ] Upload my personal memes into IMGUR (limit is 50 uploads per day)
+## Extract
 - [ ] Explore IMGUR API, especially commands to: {download images, delete images from album, upload images from album}
 - [ ] Might require knowledge of using Postman
 ## Transform
