@@ -23,18 +23,19 @@ Hence the idea - create an ETL automated pipeline that schedules meme uploads to
 ## Load
 - IG has 2 types of APIs: 1. Instagram Basic Display API and 2. Instagram Graph API
   - 1. Instagram Basic Display API
-    - Allows for app builders to share to insta story, but setup is relatively cumbersome. To explore next time
+    - Allows for app builders to share to insta story, but setup is relatively cumbersome. There is also no actively maintained IG python package
   - 2. Instagram Graph API
     - API cannot access Instagram consumer accounts (i.e., non-Business or non-Creator Instagram accounts)
-- UPDATE: Found out that there are other 3rd party API that allows for this function. To explore next time
-- Upload the formatted image to IG story by heavily leveraging on WebScraper library Selenium
+- There are other 3rd party APIs to perform this required task, but for the sake of learning Se and other libraries, will explore that next time
+- Method is to upload the formatted image to IG story by heavily leveraging on WebScraper library Selenium and mouse clicks
+- It is very "home_made" and rough - but it works (as 3rd party APIs are constantly being taken down in a matter of months)
 - Learning: Exposure to variety of Python libraries: Selenium, PyAutoGUI, time, ctypes
 
 # Progress
 ## Changelog
 ### 1. 31_01_2022
 - Built a skeleton code that uses a variety of Python libraries to execute tasks on IG story: (1) Login, (2) Close pop-ups/notifications, (3) Select and upload image of interest
-- Just found out that there are other API to perform this function. To explore further
+- Just found out that there are other unofficially maintained API to perform this function. To explore further next time
 
 # Tasks at hand
 ## Preparation
