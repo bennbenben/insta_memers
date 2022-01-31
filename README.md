@@ -20,7 +20,7 @@ Hence the idea - create an ETL automated pipeline that schedules meme uploads to
   - Basic python commands for file handling (like mv, ls, cp, rm, mkdir along with their options: equivalents of bash)
 - Learning: Exposure to variety of image processing libraries. Chance to use numpy, and get more familiar with python file commands equivalent of bash
 
-## Load
+## Egress
 - IG has 2 types of APIs:
   - Instagram Basic Display API
     - Allows for app builders to share to insta story, but this does not serve my purpose, which is simply to post and share memes. There are also no officially maintained IG python package. Apparently, automating http interactions with IG goes against their TOS
