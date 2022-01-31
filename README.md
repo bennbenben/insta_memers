@@ -1,6 +1,5 @@
 # insta_memers - Motivation
-Memes are a big part of my life. Short, succinct catchphrases that are straight to the point and widely entertaining. They bring humour to the daily mundane\
-Sharing memes on my personal instagram story have become such a personal daily ritual that my friends and family have come to love them
+Memes are a big part of my life. Short, succinct catchphrases that are straight to the point and widely entertaining. They bring humour to the daily mundane. Sharing memes on my personal instagram story have become such a personal daily ritual that my friends and family have come to love them
 
 Hence the idea - create an ETL automated pipeline that schedules meme uploads to my personal Instagram Story\
 This is a personal project to learn to build something myself, and gain exposure to a variety of automation tools
