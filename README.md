@@ -43,4 +43,4 @@ Built a skeleton code that uses a variety of Python libraries to execute tasks o
 ## Load
 - [x] Explore Selenium commands to: {initialize browser in dev/mobile mode, login to IG.com, close IG pop-ups}
 - [x] Explore other Python libraries to: {navigate in an opened windows explorer since IG Story API is not available to POST images like jpeg afaik}
-- [ ] Clean up code
+- [ ] Clean up code: {enable argument parsing, repeated uploads}
