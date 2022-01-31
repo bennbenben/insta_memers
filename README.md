@@ -6,13 +6,13 @@ Hence the idea - create an ETL automated pipeline that schedules meme uploads to
 # insta_memers - ETL Description
 ## Extract
 - A repo with huge file storage is needed to store memes (as they are all image files)
-  - For this i have decided to go with imgur as they offer unlimited uploads and downloads (limit on upload: 50 / day for free account)
+  - Decided to go with imgur as they offer unlimited uploads and downloads (limit on upload: 50 / day for free account)
   - Imgur API is also free for non-commercial usage
 - Learning: Exposure to API, JSON file formats, requests
 
 ## Transform
-- As IG stories only support fixed resolutions, an image processing engine is required
-  - Expected tasks to fit image to IG story screen size:
+- As IG stories only support fixed resolutions, an image processing engine is required to fit images to predefined resolutions
+  - Expected tasks:
     - Image resizing (to change either height, or width or both dimensions of the image)
     - Image padding (to "gracefully" manipulate image dimension size while keeping original image untouched)
     - Image collage (to collage multiple images together)
