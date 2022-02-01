@@ -94,6 +94,7 @@ Hence the idea - create an ETL automated pipeline that schedules meme uploads to
 - Cleaned <i>app_egress.py</i> code, added in argparse notations and organized the code into main and function methods for better clarity. This also enables iteration of strings (and hence multiple jpeg files) when called upon by an external program (probably a bash script: can call Extract, Transform, and Egress in sequence)
 - Created an IMGUR account and started to get familiar with the structure
 - Downloaded existing memes into local C:\\ and removed them from google photos
+- Half-completed skeleton code of app_transform.py
 
 
 # Future enhancements (for consideration)
