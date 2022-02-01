@@ -88,10 +88,10 @@ Hence the idea - create an ETL automated pipeline that schedules meme uploads to
 - Just found out that there are other unofficially maintained API to perform this function. To explore further next time
 ### 2. 01_02_2022
 - Read up about PIL and OpenCV package resizizing methods. Thought about the "flow" to resize and conditions needed to trigger so
-- Both packages seem similar and can fulfill my use cases. Another enhancement that is possible is to use K-means clustering to pad the images with the most dominant colour. Will choose OpenCV as it seems to be more versatile
-- Just discovered a fatal oversight - IMGUR only allows for 50 uploads per day. The number of memes that I have locally are easily >5k. This prompts me to quickly learn how to interact with IMGUR API
+- Both packages seem similar and can fulfill my use cases. Another enhancement that is possible is to use K-means clustering to choose the most dominant color for image padding. Will choose OpenCV as it seems to be more versatile
+- Just discovered a fatal oversight - IMGUR only allows for 50 uploads per day. The number of memes that I have locally are easily >5k. This means my personal memes might need some time before it is stored online
 ### 3. 02_02_2022
-- Cleaned app_egress.py <i>(or egress)</i> main code, added in argparse notations and organized the code into main and function methods for better clarify. This enables iteration of strings later on (or multiple jpeg files)
+- Cleaned <i>app_egress.py</i> code, added in argparse notations and organized the code into main and function methods for better clarity. This also enables iteration of strings (and hence multiple jpeg files) when called upon by an external program (probably a bash script: can call Extract, Transform, and Egress in sequence)
 - Created an IMGUR account and started to get familiar with the structure
 - Downloaded existing memes into local C:\\ and removed them from google photos
 
