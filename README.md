@@ -36,7 +36,7 @@ Hence the idea - create an ETL automated pipeline that schedules meme uploads to
 ### Considerations
 - Do it using: (1) API, or (2) Web crawling (this is very manual)
 
-<u>(1) API</u>
+<ins>(1) API</ins>
 - IG has 2 types of official APIs, both of them are not suitable for my purpose:
   - Instagram Basic Display API
     - Allows app builders to interact with Instagram. However, this is mostly for Android/iOS developers and does not serve my purpose, which is simply to share memes
@@ -47,7 +47,7 @@ Hence the idea - create an ETL automated pipeline that schedules meme uploads to
   - These APIs come and go within a few months, and spending time to learn how to tweak it each time does not sound palatable
   - 3rd Party API: There are other 3rd party APIs available (others have ported/cloned Instagram API before it got taken down). They use existing tokens that expires after a set period of time (i believe it refreshes every 90days)
 
-<u>(2) Web crawling</u>
+<ins>(2) Web crawling</ins>
 - Use web scraping libraries to navigate in IG website
   - Well known ones are BeautifulSoup, or Selenium
   - Might need some keyboard and mouse click libraries like keyboard, Robot, or PyAutoGUI
@@ -93,8 +93,7 @@ Hence the idea - create an ETL automated pipeline that schedules meme uploads to
 ### 3. 02_02_2022
 - Cleaned app_egress.py <i>(or egress)</i> main code, added in argparse notations and organized the code into main and function methods for better clarify. This enables iteration of strings later on (or multiple jpeg files)
 - Created an IMGUR account and started to get familiar with the structure
-- <ins>Downloaded existing memes into local C:\\ and removed them from google photos</ins>
-- 
+- Downloaded existing memes into local C:\\ and removed them from google photos
 
 
 # Future enhancements (for consideration)
