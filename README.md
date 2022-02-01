@@ -1,9 +1,9 @@
-# memes_4_masses - Motivation
+# m4m - Motivation
 Memes are a big part of my life. Short, succinct catchphrases that are straight to the point and widely entertaining. They bring humour to the daily mundane. Sharing memes on my personal instagram story have become such a personal daily ritual that my friends and family have come to love them
 
-Hence the idea - create an ETL automated pipeline that schedules meme uploads to my personal Instagram Story. This is a personal project to learn to build something myself, and gain exposure to a variety of automation tools
+Hence the idea - create an ETL automated pipeline that schedules meme uploads to my personal Instagram Story. This is a personal project to learn to build something myself, and gain exposure to a variety of automation tools: Memes for masses
 
-# memes_4_masses - ETL Description
+# ETL Description
 ## Extract
 - A repo with huge file storage is needed to store memes (as they are all image files)
   - Decided to go with imgur as they offer unlimited uploads and downloads
