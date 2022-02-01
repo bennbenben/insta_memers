@@ -67,7 +67,7 @@ Hence the idea - create an ETL automated pipeline that schedules meme uploads to
 ## Tasks at hand
 ### Preparation
 - [ ] Compile my personal memes (from various sources) into one folder
-- [ ] Create IMGUR account
+- [x] Create IMGUR account
 - [ ] Upload my personal memes into IMGUR (limit is 50 per day)
 ### Extract
 - [ ] Explore IMGUR API, especially commands to: {download images, delete images from album, upload images from album}
@@ -92,6 +92,9 @@ Hence the idea - create an ETL automated pipeline that schedules meme uploads to
 - Just discovered a fatal oversight - IMGUR only allows for 50 uploads per day. The number of memes that I have locally are easily >5k. This prompts me to quickly learn how to interact with IMGUR API
 ### 3. 02_02_2022
 - Cleaned app_egress.py <i>(or egress)</i> main code, added in argparse notations and organized the code into main and function methods for better clarify. This enables iteration of strings later on (or multiple jpeg files)
+- Created an IMGUR account and started to get familiar with the structure
+- <ins>Downloaded existing memes into local C:\\ and removed them from google photos</ins>
+- 
 
 
 # Future enhancements (for consideration)
