@@ -55,7 +55,7 @@ Hence the idea - create an ETL automated pipeline that schedules meme uploads to
   - As this is semi "automated", might not be the most elegant way
   - There is a chance that another computer's browser will respond differently
 
-<u>Choice</u>
+<ins>Choice</ins>
 - Decided to go with the web crawling method. It heavily leverages on Python libraries like Selenium and PyAutoGUI for keyboard and mouse clicks. This is very  "home_made", and "rough". But it does not get taken down in a matter of months (like other 3rd party APIs). It's also good exposure for a beginner (like me)
 - For a home-made simple project, and interest in learning other python libraries, will opt to explore 3rd party APIs another time (for code enhancements/improvements). After all, i am already having some exposure to API in Extract stage
 - The libraries i decided to go with are Selenium and PyAutoGUI as they are highly versatile (learning them might come in handy with future projects)
