@@ -41,7 +41,7 @@ Hence the idea - create an ETL automated pipeline that schedules meme uploads to
 - Both packages seem similar and can fulfill my use cases. Another enhancement that is possible is to use K-means clustering to pad the images with the most dominant colour. Will choose OpenCV as it seems to be more versatile
 - Just discovered a fatal oversight - IMGUR only allows for 50 uploads per day. The number of memes that I have locally are easily >5k. This prompts me to quickly learn how to interact with IMGUR API
 ### 3. 02_02_2022
-- Cleaned app_egress.py <i>(or load)</i> main code, added in argparse notations and organized the code into main and function methods for better clarify. This enables iteration of strings later on (or multiple jpeg files)
+- Cleaned app_egress.py <i>(or egress)</i> main code, added in argparse notations and organized the code into main and function methods for better clarify. This enables iteration of strings later on (or multiple jpeg files)
 
 # Tasks at hand
 ## Preparation
@@ -54,7 +54,7 @@ Hence the idea - create an ETL automated pipeline that schedules meme uploads to
 - [x] Explore Python libraries to perform image operations: {resizing, padding, make collages}
 - [ ] Build skeleton code
 - [ ] Explore Python methods for file handling
-## Load
+## Egress
 - [x] Explore Selenium commands to: {initialize browser in dev/mobile mode, login to IG.com, close IG pop-ups}
 - [x] Explore other Python libraries to: {navigate in an opened windows explorer since IG Story API is not available to POST images like jpeg afaik}
 - [x] Clean code
