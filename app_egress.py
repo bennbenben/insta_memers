@@ -1,6 +1,7 @@
 ### Import Libraries ###
 # Import selenium classes
 from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
@@ -113,7 +114,7 @@ def login_ig_home_page()->None:
 
 	# Initialize selenium webdriver to IG main page
 	print('Launching selenium webdriver to: {0}'.format(website_url))
-	driver = webdriver.Chrome(options=options, executable_path='C:\\Program Files (x86)\\chromedriver.exe')
+	driver = webdriver.Chrome(options=options, Service('C:\\Program Files (x86)\\chromedriver.exe'))
 	driver.get(website_url)
 
 	# Close the pop-up that says: Log-in
