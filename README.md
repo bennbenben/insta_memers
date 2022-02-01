@@ -13,7 +13,7 @@ Hence the idea - create an ETL automated pipeline that schedules meme uploads to
   - Decided to go with imgur as they offer unlimited uploads and downloads
   - Imgur API is also confirmed to be free for non-commercial usage (https://apidocs.imgur.com/)
 ### Learning
-- Exposure to API, `json`, `requests`
+- Exposure to API, `json, requests`
 
 ## Transform
 ### Objective
