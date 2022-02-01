@@ -54,7 +54,8 @@ Hence the idea - create an ETL automated pipeline that schedules meme uploads to
 ## Load
 - [x] Explore Selenium commands to: {initialize browser in dev/mobile mode, login to IG.com, close IG pop-ups}
 - [x] Explore other Python libraries to: {navigate in an opened windows explorer since IG Story API is not available to POST images like jpeg afaik}
-- [ ] Clean up code: {enable argument parsing, repeated uploads}
+- [x] Clean code
+- [ ] Enhance code: {enable argument parsing, repeated uploads}
 
 # Enhancements
 ## Extract
