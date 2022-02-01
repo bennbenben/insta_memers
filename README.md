@@ -27,7 +27,7 @@ Hence the idea - create an ETL automated pipeline that schedules meme uploads to
   - Instagram Graph API
     - API cannot access Instagram consumer accounts (i.e., non-Business or non-Creator Instagram accounts)
 - As there are no officially maintained IG APIs, and it goes against their TOS to share code online (they have taken down their API), using something like that could be infringement. There are also no IG "officially" maintained python package
-  - 3rd Party API: There are other 3rd party APIs available (others have ported/cloned Instagram API before it got taken down). But for a home-made simple project, and interest in learning other python libraries, will opt to explore these 3rd party APIs another time (for code enhancements/improvements)
+  - 3rd Party API: There are other 3rd party APIs available (others have ported/cloned Instagram API before it got taken down). It uses existing tokens that can be patched anytime. But for a home-made simple project, and interest in learning other python libraries, will opt to explore these 3rd party APIs another time (for code enhancements/improvements)
 - Hence I have opted to "manually automate" the process: which is to web-crawl. It heavily leverages on Python libraries like Selenium and PyAutoGUI for keyboard and mouse clicks. This is very  "home_made", and "rough". But it does not get taken down in a matter of months (like other 3rd party APIs). It's also good exposure for a beginner (like me)
 - Learning: Exposure to variety of Python libraries: Selenium, PyAutoGUI, time, ctypes
 
@@ -49,13 +49,15 @@ Hence the idea - create an ETL automated pipeline that schedules meme uploads to
 ## Extract
 - [ ] Explore IMGUR API, especially commands to: {download images, delete images from album, upload images from album}
 ## Transform
-- [ ] Explore Python libraries to perform image operations: {resizing, padding, make collages}
+- [x] Explore Python libraries to perform image operations: {resizing, padding, make collages}
+- [ ] Build skeleton code
 - [ ] Explore Python methods for file handling
 ## Load
 - [x] Explore Selenium commands to: {initialize browser in dev/mobile mode, login to IG.com, close IG pop-ups}
 - [x] Explore other Python libraries to: {navigate in an opened windows explorer since IG Story API is not available to POST images like jpeg afaik}
 - [x] Clean code
-- [ ] Enhance code: {enable argument parsing, repeated uploads}
+- [x] Enhance code: {enable argument parsing, repeated uploads}
+- [ ] Enable logger before leaving it autopilot
 
 # Enhancements
 ## Extract
