@@ -49,7 +49,7 @@ Hence the idea - create an ETL automated pipeline that schedules meme uploads to
 
 <ins>(2) Web crawling</ins>
 - Use web scraping libraries to navigate in IG website
-  - Well known ones are BeautifulSoup, or Selenium
+  - Well known ones are `beautifulsoup, selenium`
   - Might need some keyboard and mouse click libraries like `keyboard, Robot, or PyAutoGUI`
 - Cons: 
   - As this is semi "automated", might not be the most elegant way
@@ -66,7 +66,7 @@ Hence the idea - create an ETL automated pipeline that schedules meme uploads to
 # Progress
 ## Tasks at hand
 ### Preparation
-- [ ] Compile my personal memes (from various sources) into one folder
+- [x] Compile my personal memes (from various sources) into one folder
 - [x] Create IMGUR account
 - [ ] Upload my personal memes into IMGUR (limit is 50 per day)
 ### Extract
