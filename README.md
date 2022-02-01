@@ -40,6 +40,8 @@ Hence the idea - create an ETL automated pipeline that schedules meme uploads to
 - Read up about PIL and OpenCV package resizizing methods. Thought about the "flow" to resize and conditions needed to trigger so
 - Both packages seem similar and can fulfill my use cases. Another enhancement that is possible is to use K-means clustering to pad the images with the most dominant colour. Will choose OpenCV as it seems to be more versatile
 - Just discovered a fatal oversight - IMGUR only allows for 50 uploads per day. The number of memes that I have locally are easily >5k. This prompts me to quickly learn how to interact with IMGUR API
+### 3. 02_02_2022
+- Cleaned app_egress.py <i>(or load)</i> main code, added in argparse notations and organized the code into main and function methods for better clarify. This enables iteration of strings later on (or multiple jpeg files)
 
 # Tasks at hand
 ## Preparation
@@ -61,7 +63,7 @@ Hence the idea - create an ETL automated pipeline that schedules meme uploads to
 
 # Enhancements
 ## Extract
-- [ ] Possibly execute the commands using Postman
+- [ ] Possibly execute the commands using Postman (?)
 ## Transform
 - [ ] Write a personal K-means clustering to return the most dominant color for a given image (can be used to pad images)
 ## Load
