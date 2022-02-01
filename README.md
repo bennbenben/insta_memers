@@ -11,9 +11,9 @@ Hence the idea - create an ETL automated pipeline that schedules meme uploads to
 ### Considerations
 - A repo with huge file storage is needed to store memes (as they are all image files)
   - Decided to go with imgur as they offer unlimited uploads and downloads
-  - Imgur API is also confirmed to be free for non-commercial usage # https://apidocs.imgur.com/
+  - Imgur API is also confirmed to be free for non-commercial usage (https://apidocs.imgur.com/)
 ### Learning
-- Exposure to API, JSON file formats, requests
+- Exposure to API, `json`, `requests`
 
 ## Transform
 ### Objective
@@ -25,10 +25,10 @@ Hence the idea - create an ETL automated pipeline that schedules meme uploads to
     - Image padding (to "gracefully" manipulate image dimension size while keeping original image untouched)
     - Image collage (to collage multiple images together)
 - Bash/Python file handling
-  - Basic python commands for file handling (like mv, ls, cp, rm, mkdir along with their options: equivalents of bash)
+  - Basic python commands for file handling (like `mv, ls, cp, rm, mkdir` along with their options: equivalents of bash)
 ### Learning
-- Exposure to variety of image processing libraries like PIL and OpenCV (just need to choose one)
-- Chance to practise numpy, and get more familiar with python file handling commands (aka: the os utility module)
+- Exposure to variety of image processing libraries like `PIL and OpenCV` (just need to choose one)
+- Chance to practise `numpy`, and get more familiar with python file handling commands (aka: the `os` utility module)
 
 ## Egress
 ### Objective
@@ -50,7 +50,7 @@ Hence the idea - create an ETL automated pipeline that schedules meme uploads to
 <ins>(2) Web crawling</ins>
 - Use web scraping libraries to navigate in IG website
   - Well known ones are BeautifulSoup, or Selenium
-  - Might need some keyboard and mouse click libraries like keyboard, Robot, or PyAutoGUI
+  - Might need some keyboard and mouse click libraries like `keyboard, Robot, or PyAutoGUI`
 - Cons: 
   - As this is semi "automated", might not be the most elegant way
   - There is a chance that another computer's browser will respond differently
@@ -58,9 +58,9 @@ Hence the idea - create an ETL automated pipeline that schedules meme uploads to
 <ins>Choice</ins>
 - Decided to go with the web crawling method. It heavily leverages on Python libraries like Selenium and PyAutoGUI for keyboard and mouse clicks. This is very  "home_made", and "rough". But it does not get taken down in a matter of months (like other 3rd party APIs). It's also good exposure for a beginner (like me)
 - For a home-made simple project, and interest in learning other python libraries, will opt to explore 3rd party APIs another time (for code enhancements/improvements). After all, i am already having some exposure to API in Extract stage
-- The libraries i decided to go with are Selenium and PyAutoGUI as they are highly versatile (learning them might come in handy with future projects)
+- The libraries i decided to go with are `selenium and PyAutoGUI` as they are highly versatile (learning them might come in handy with future projects)
 ### Learning
-- Exposure to variety of Python libraries: Selenium, PyAutoGUI, time, ctypes
+- Exposure to variety of Python libraries: `selenium, PyAutoGUI, time, ctypes`
 
 
 # Progress
