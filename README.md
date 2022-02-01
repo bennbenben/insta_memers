@@ -34,7 +34,7 @@ Hence the idea - create an ETL automated pipeline that schedules meme uploads to
 ### Objective
 - Upload the transformed or edited image onto IG (and/or: Imgur)
 ### Considerations
-- Do it using: (1) API, or (2) Web crawling (this is very manual)
+- Do it using: (1) API, or (2) Web crawling (this is very manual)\
 <u>(1) API</u>
 - IG has 2 types of official APIs, both of them are not suitable for my purpose:
   - Instagram Basic Display API
@@ -93,7 +93,7 @@ Hence the idea - create an ETL automated pipeline that schedules meme uploads to
 - Cleaned app_egress.py <i>(or egress)</i> main code, added in argparse notations and organized the code into main and function methods for better clarify. This enables iteration of strings later on (or multiple jpeg files)
 
 
-# Enhancements
+# Future enhancements (for consideration)
 ## Extract
 - [ ] Possibly execute the commands using Postman (?)
 ## Transform
