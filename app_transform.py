@@ -109,6 +109,8 @@ def process_image(img_vars: dict, output_file: str)->dict:
 	print('Checkpoint. New canvas dimensions: height={0}, width={1}, channels={2}'.format(processed_img.shape[0], processed_img.shape[1], processed_img.shape[2]))
 
 	processed_img[img_vars['pip_coords']['y1']:img_vars['pip_coords']['y2'], img_vars['pip_coords']['x1']:img_vars['pip_coords']['x2']]=resized_img
+
+	# Write the processed image to file destination
 	cv2.imwrite(output_file, processed_img)
 
 	return img_vars
@@ -124,6 +126,5 @@ if __name__=="__main__":
 	# Start Application
 	for i in args.string_1:
 		resized_img_vars = resize_type(i, ig_defined_res, screen_factor, scale_tolerance)
-		# print(resize_vars)
 		pip_img_vars = add_pip_vars(resized_img_vars)
 		processed_img_vars = process_image(pip_img_vars, output_file)
