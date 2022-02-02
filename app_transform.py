@@ -4,15 +4,25 @@ import os
 import argparse
 from collections import defaultdict
 import numpy as np
+from datetime import datetime
 
 ### Helper functions ###
+def valid_date(s):
+	"""
+	Helper function that checks the command line input that execution_date is specified correctly. In this case: %Y-%m-%d
+	"""
+	try:
+		return datetime.strptime(s, "%Y-%m-%d_%H-%M")
+	except ValueError:
+		err_msg = "not a valid datetime: {0}. Use this format:{1}".format(s,"%Y-%m-%d_%H-%M")
+		raise argparse.ArgumentTypeError(err_msg)
+
 
 ### Initialize variables ###
 ig_defined_res = (1920, 1080) # IG story max screen resolution. Use height x width as opencv follows numpy orientation
-screen_factor = .83339274 # float
+screen_factor = .75 # float
 scale_tolerance = 2 # for resizing - only scale
 img_vars = defaultdict()
-output_file="C:\\Users\\bennb\\Desktop\\formatted_1.jpg"
 
 # Flow
 # func 1. Read in image dimensions (esp width). Output a dictionary of variables to pass to func2
@@ -94,7 +104,7 @@ def add_pip_vars(img_vars: dict)->dict:
 
 	return img_vars
 
-def process_image(img_vars: dict, output_file: str)->dict:
+def process_image(img_vars: dict, output_dir: str, exec_datetime: object, iter: int)->dict:
 	"""
 	Input: (1) Reads the dictionary of image objects and variables, (2) Output file location
 	Performs: (1) Image resizing, (2) Pasting resized image into canvas object, (3) Saves the processed image into the output file location
@@ -111,7 +121,17 @@ def process_image(img_vars: dict, output_file: str)->dict:
 	processed_img[img_vars['pip_coords']['y1']:img_vars['pip_coords']['y2'], img_vars['pip_coords']['x1']:img_vars['pip_coords']['x2']]=resized_img
 
 	# Write the processed image to file destination
-	cv2.imwrite(output_file, processed_img)
+	exec_date=exec_datetime.strftime("%Y%m%d")
+	exec_time=exec_datetime.strftime("%H%M")
+
+	file_dest=os.path.join(output_dir,"{0}_{1}_{2}{3}".format(exec_date,exec_time,str(iter),".jpg"))
+
+
+
+	print(file_dest)
+	# file_dest="C:\\Users\\bennb\\Desktop\\formatted_1.jpg"
+
+	cv2.imwrite(file_dest, processed_img)
 
 	return img_vars
 
@@ -119,12 +139,16 @@ def process_image(img_vars: dict, output_file: str)->dict:
 if __name__=="__main__":
 
 	# Parse arguments
-	my_parser = argparse.ArgumentParser(prog="app_transform.py", description="Transform image to an easily readable format by both human and IG story", usage='%(prog)s "${strings_of_file_paths[@]}"')
-	my_parser.add_argument("string_1", help="string: absolute path to image file. Use backslash for windows file paths", type=str, nargs="+")
+	my_parser = argparse.ArgumentParser(prog="app_transform.py", description="Transform image to an easily readable format by both human and IG story", usage='%(prog)s execution_date(format:%Y-%m-%d_%H-%M) "${meme_absolute_file_paths[@]}" "output_directory"')
+	my_parser.add_argument("execution_date", help="execution_date: Input execution datetime as %Y-%m-%d_%H-%M", type=valid_date)
+	my_parser.add_argument("meme_absolute_file_paths", help="meme_absolute_file_paths: variable consisting of absolute paths to image files. Use backslash for windows file paths", type=str, nargs="+")
+	my_parser.add_argument("output_directory", help="output_directory: file path to output directory", type=str)
 	args=my_parser.parse_args()
 
+	print(args)
+
 	# Start Application
-	for i in args.string_1:
-		resized_img_vars = resize_type(i, ig_defined_res, screen_factor, scale_tolerance)
+	for i in range(len(args.meme_absolute_file_paths)):
+		resized_img_vars = resize_type(args.meme_absolute_file_paths[i], ig_defined_res, screen_factor, scale_tolerance)
 		pip_img_vars = add_pip_vars(resized_img_vars)
-		processed_img_vars = process_image(pip_img_vars, output_file)
+		processed_img_vars = process_image(img_vars=pip_img_vars, output_dir=args.output_directory, exec_datetime=args.execution_date, iter=i)
