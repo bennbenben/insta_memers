@@ -73,7 +73,8 @@ Hence the idea - create an ETL automated pipeline that schedules meme uploads to
 - [ ] Explore IMGUR API, especially commands to: {download images, delete images from album, upload images from album}
 ### Transform
 - [x] Explore Python libraries to perform image operations: {resizing, padding, make collages}
-- [ ] Build skeleton code
+- [x] Build skeleton code
+- [ ] Clean code & include argparse notations. Include ability to iterate and save multiple files with proper names
 - [ ] Explore Python methods for file handling
 ### Egress
 - [x] Explore Selenium commands to: {initialize browser in dev/mobile mode, login to IG.com, close IG pop-ups}
