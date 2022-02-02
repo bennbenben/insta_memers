@@ -74,7 +74,7 @@ Hence the idea - create an ETL automated pipeline that schedules meme uploads to
 ### Transform
 - [x] Explore Python libraries to perform image operations: {resizing, padding, make collages}
 - [x] Build skeleton code
-- [ ] Clean code & include argparse notations. Include ability to iterate and save multiple files with proper names
+- [x] Clean code & include argparse notations. Include ability to iterate and save multiple files with proper names
 - [ ] Enable logger before leaving it autopilot
 ### Egress
 - [x] Explore Selenium commands to: {initialize browser in dev/mobile mode, login to IG.com, close IG pop-ups}
@@ -96,12 +96,13 @@ Hence the idea - create an ETL automated pipeline that schedules meme uploads to
 - Created an IMGUR account and started to get familiar with the structure
 - Downloaded existing memes into local C:\\ and removed them from google photos
 - Completed skeleton code of app_transform.py
+- Cleaned <i>app_transform.py</i> code, added in argparse and iterative behaviour and saving to output file directories with iterative file names
 
 
 # Future enhancements (for consideration)
 ## Extract
 - [ ] Possibly execute the commands using Postman (?)
 ## Transform
-- [ ] Write a personal K-means clustering to return the most dominant color for a given image (can be used to pad images)
+- [ ] Use K-means clustering to return the most dominant color for a given image (to pad the image)
 ## Load
 - [ ] Explore IG Basic API (future enhancement)
