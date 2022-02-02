@@ -24,8 +24,8 @@ Hence the idea - create an ETL automated pipeline that schedules meme uploads to
     - Image resizing (to change either height, or width or both dimensions of the image)
     - Image padding (to "gracefully" manipulate image dimension size while keeping original image untouched)
     - Image collage (to collage multiple images together)
-- Bash/Python file handling
-  - Basic python commands for file handling (like `mv, ls, cp, rm, mkdir` along with their options: equivalents of bash)
+- Bash file handling
+  - Basic shell scripting for file handling and passing variables into <i>app_transform.py</i>
 ### Learning
 - Exposure to variety of image processing libraries like `PIL and OpenCV` (just need to choose one)
 - Chance to practise `numpy`, and get more familiar with python file handling commands (aka: the `os` utility module)
@@ -75,7 +75,7 @@ Hence the idea - create an ETL automated pipeline that schedules meme uploads to
 - [x] Explore Python libraries to perform image operations: {resizing, padding, make collages}
 - [x] Build skeleton code
 - [ ] Clean code & include argparse notations. Include ability to iterate and save multiple files with proper names
-- [ ] Explore Python methods for file handling
+- [ ] Enable logger before leaving it autopilot
 ### Egress
 - [x] Explore Selenium commands to: {initialize browser in dev/mobile mode, login to IG.com, close IG pop-ups}
 - [x] Explore other Python libraries to: {navigate in an opened windows explorer since IG Story API is not available to POST images like jpeg afaik}
@@ -95,7 +95,7 @@ Hence the idea - create an ETL automated pipeline that schedules meme uploads to
 - Cleaned <i>app_egress.py</i> code, added in argparse notations and organized the code into main and function methods for better clarity. This also enables iteration of strings (and hence multiple jpeg files) when called upon by an external program (probably a bash script: can call Extract, Transform, and Egress in sequence)
 - Created an IMGUR account and started to get familiar with the structure
 - Downloaded existing memes into local C:\\ and removed them from google photos
-- Half-completed skeleton code of app_transform.py
+- Completed skeleton code of app_transform.py
 
 
 # Future enhancements (for consideration)
