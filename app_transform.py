@@ -24,11 +24,6 @@ screen_factor = .75 # float
 scale_tolerance = 2 # for resizing - only scale
 img_vars = defaultdict()
 
-# Flow
-# func 1. Read in image dimensions (esp width). Output a dictionary of variables to pass to func2
-# func 2. Resize according to a percentage of pre-defined IG dimensions, while maintaining aspect ratio. Output a dictionary of variables to pass to func3
-# func 3. Calculate the padding the images need and pass the variables to func4
-# func 4. Execute the resize, and the image padding steps. Output the new image in a saved location
 
 ### Application functions ###
 def resize_type(file_path: str, defined_res: tuple, screen_factor: float, scale_tolerance: float)->dict:
@@ -125,12 +120,8 @@ def process_image(img_vars: dict, output_dir: str, exec_datetime: object, iter: 
 	exec_time=exec_datetime.strftime("%H%M")
 
 	file_dest=os.path.join(output_dir,"{0}_{1}_{2}{3}".format(exec_date,exec_time,str(iter),".jpg"))
-
-
-
-	print(file_dest)
+	# print(file_dest)
 	# file_dest="C:\\Users\\bennb\\Desktop\\formatted_1.jpg"
-
 	cv2.imwrite(file_dest, processed_img)
 
 	return img_vars
