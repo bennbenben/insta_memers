@@ -87,7 +87,7 @@ screensize = user32.GetSystemMetrics(0), user32.GetSystemMetrics(1)
 
 
 ### Application functions ###
-def login_ig_home_page()->None:
+def login_ig_home_page()->tuple:
 	"""
 	Launch selenium and close various pop-ups. To initialize to IG home page
 	"""
@@ -198,5 +198,5 @@ if __name__=="__main__":
 	for i in my_args.string_1:
 		parent_dir=os.path.split(i)[0]
 		file_name=os.path.split(i)[1]
-	post_ig_story(parent_dir, file_name, webdr_object, webdr_wait_object)
+		post_ig_story(parent_dir, file_name, webdr_object, webdr_wait_object)
 	close_selenium()
