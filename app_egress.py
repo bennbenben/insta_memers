@@ -190,12 +190,12 @@ if __name__=="__main__":
 
 	# Parse arguments
 	my_parser = argparse.ArgumentParser(prog='app_egress.py', description='Upload Image to IG Story', usage='%(prog)s "${strings_of_file_paths[@]}"')
-	my_parser.add_argument("string_1", help="string: absolute path to image file. Use backslash for windows file paths", type=str, nargs='+')
+	my_parser.add_argument("meme_absolute_file_paths", help="Array consisting of absolute paths to image files as strings. Use backslash for windows file paths", type=str, nargs='+')
 	my_args = my_parser.parse_args()
 
 	# Application Start
 	webdr_object, webdr_wait_object = login_ig_home_page()
-	for i in my_args.string_1:
+	for i in my_args.meme_absolute_file_paths:
 		parent_dir=os.path.split(i)[0]
 		file_name=os.path.split(i)[1]
 		post_ig_story(parent_dir, file_name, webdr_object, webdr_wait_object)
