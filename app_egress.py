@@ -2,12 +2,12 @@
 # Import selenium classes
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.common.action_chains import ActionChains
-from selenium.webdriver.common.keys import Keys
 # from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+# from selenium.webdriver.common.action_chains import ActionChains
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.ui import WebDriverWait
 
 # Import other modules
 import time
@@ -114,7 +114,7 @@ def login_ig_home_page()->tuple:
 
 	# Initialize selenium webdriver to IG main page
 	print('Launching selenium webdriver to: {0}'.format(website_url))
-	driver = webdriver.Chrome(options=options, Service('C:\\Program Files (x86)\\chromedriver.exe'))
+	driver = webdriver.Chrome(service=Service('C:\\Program Files (x86)\\chromedriver.exe'), options=options)
 	driver.get(website_url)
 
 	# Close the pop-up that says: Log-in
