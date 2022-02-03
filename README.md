@@ -102,6 +102,7 @@ Hence the idea - create an ETL automated pipeline that schedules meme uploads to
 ### 4. 03_02_2022
 - Starting building skeleton code for app_extract.py
 - Read up on imgurpython calling methods and verified client authentication object works
+### 5. 04_02_2022
 - Half done skeleton code for scheduling shell script
 
 
