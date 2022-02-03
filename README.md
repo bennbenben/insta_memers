@@ -70,7 +70,8 @@ Hence the idea - create an ETL automated pipeline that schedules meme uploads to
 - [x] Create IMGUR account
 - [ ] Upload my personal memes into IMGUR (limit is 50 per day)
 ### Extract
-- [ ] Explore IMGUR API, especially commands to: {download images, delete images from album, upload images from album}
+- [x] Explore IMGUR API, especially commands to: {download images, delete images from album, upload images from album}
+- [ ] Build skeleton code
 ### Transform
 - [x] Explore Python libraries to perform image operations: {resizing, padding, make collages}
 - [x] Build skeleton code
@@ -97,6 +98,8 @@ Hence the idea - create an ETL automated pipeline that schedules meme uploads to
 - Downloaded existing memes into local C:\\ and removed them from google photos
 - Completed skeleton code of app_transform.py
 - Cleaned <i>app_transform.py</i> code, added in argparse and iterative behaviour and saving to output file directories with iterative file names
+### 4. 03_02_2022
+- Starting building skeleton code for app_extract.py
 
 
 # Future enhancements (for consideration)
