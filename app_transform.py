@@ -130,9 +130,11 @@ def process_image(img_vars: dict, output_dir: str, exec_datetime: object, iter: 
 if __name__=="__main__":
 
 	# Parse arguments
-	my_parser = argparse.ArgumentParser(prog="app_transform.py", description="Transform image to an easily readable format by both human and IG story", usage='%(prog)s execution_date(format:%Y-%m-%d_%H-%M) "${meme_absolute_file_paths[@]}" "output_directory"')
+	my_parser = argparse.ArgumentParser(prog="app_transform.py", description="Transform image to an easily readable format by both human and IG story", 
+		usage='%(prog)s execution_date(format:%Y-%m-%d_%H-%M) "${meme_absolute_file_paths[@]}" "output_directory"')
 	my_parser.add_argument("execution_date", help="execution_date: Input execution datetime as %Y-%m-%d_%H-%M", type=valid_date)
-	my_parser.add_argument("meme_absolute_file_paths", help="meme_absolute_file_paths: variable consisting of absolute paths to image files. Use backslash for windows file paths", type=str, nargs="+")
+	my_parser.add_argument("meme_absolute_file_paths", help="meme_absolute_file_paths: variable consisting of absolute paths to image files. Use backslash for windows file paths", 
+		type=str, nargs="+")
 	my_parser.add_argument("output_directory", help="output_directory: file path to output directory", type=str)
 	args=my_parser.parse_args()
 
