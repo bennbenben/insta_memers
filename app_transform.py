@@ -12,9 +12,9 @@ def valid_date(s):
 	Helper function that checks the command line input that execution_date is specified correctly. In this case: %Y-%m-%d
 	"""
 	try:
-		return datetime.strptime(s, "%Y-%m-%d_%H-%M")
+		return datetime.strptime(s, "%Y%m%d_%H%M")
 	except ValueError:
-		err_msg = "not a valid datetime: {0}. Use this format:{1}".format(s,"%Y-%m-%d_%H-%M")
+		err_msg = "not a valid datetime: {0}. Use this format:{1}".format(s,"%Y%m%d_%H%M")
 		raise argparse.ArgumentTypeError(err_msg)
 
 
@@ -130,11 +130,9 @@ def process_image(img_vars: dict, output_dir: str, exec_datetime: object, iter: 
 if __name__=="__main__":
 
 	# Parse arguments
-	my_parser = argparse.ArgumentParser(prog="app_transform.py", description="Transform image to an easily readable format by both human and IG story", 
-		usage='%(prog)s execution_date(format:%Y-%m-%d_%H-%M) "${meme_absolute_file_paths[@]}" "output_directory"')
-	my_parser.add_argument("execution_date", help="Input execution datetime as %Y-%m-%d_%H-%M", type=valid_date)
-	my_parser.add_argument("meme_absolute_file_paths", help="Array consisting of absolute paths to image files as strings. Use backslash for windows file paths", 
-		type=str, nargs="+")
+	my_parser = argparse.ArgumentParser(prog="app_transform.py", description="Transform image to an easily readable format by both human and IG story", usage='%(prog)s execution_date: object format:%%Y-%%m-%%d_%%H-%%M "meme_absolute_file_paths: ${array_of_strings[@]}" "output_directory: string"')
+	my_parser.add_argument("execution_date", help="Input execution datetime as %%Y%%m%%d_%%H%%M", type=valid_date)
+	my_parser.add_argument("meme_absolute_file_paths", help="Array consisting of absolute paths to image files as strings. Use backslash for windows file paths", type=str, nargs="+")
 	my_parser.add_argument("output_directory", help="Absolute file path to output directory", type=str)
 	args=my_parser.parse_args()
 
