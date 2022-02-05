@@ -90,13 +90,13 @@ Hence the idea - create an ETL automated pipeline that schedules meme uploads to
 - Built a skeleton code that uses a variety of Python libraries to execute tasks on IG story: (1) Login, (2) Close pop-ups/notifications, (3) Select and upload image of interest
 - Just found out that there are other unofficially maintained API to perform this function. To explore further next time
 ### 2. 01_02_2022
-- Read up about PIL and OpenCV package resizizing methods. Thought about the "flow" to resize and conditions needed to trigger so
-- Both packages seem similar and can fulfill my use cases. Another enhancement that is possible is to use K-means clustering to choose the most dominant color for image padding. Will choose OpenCV as it seems to be more versatile
+- Read up about `PIL and OpenCV` package resizizing methods. Thought about the "flow" to resize and conditions needed to trigger so
+- Both packages seem similar and can fulfill my use cases. Another enhancement that is possible is to use K-means clustering to choose the most dominant color for image padding. Will choose `OpenCV` as it seems to be more versatile
 - Just discovered a fatal oversight - IMGUR only allows for 50 uploads per day. The number of memes that I have locally are easily >5k. This means my personal memes might need some time before it is stored online
 ### 3. 02_02_2022
 - Cleaned <i>app_egress.py</i> code, added in argparse notations and organized the code into main and function methods for better clarity. This also enables iteration of strings (and hence multiple jpeg files) when called upon by an external program (probably a bash script: can call Extract, Transform, and Egress in sequence)
 - Created an IMGUR account and started to get familiar with the structure
-- Downloaded existing memes into local C:\\ and removed them from google photos
+- Downloaded existing memes into local <i>C:\\</i> and removed them from google photos
 - Completed skeleton code of app_transform.py
 - Cleaned <i>app_transform.py</i> code, added in argparse and iterative behaviour and saving to output file directories with iterative file names
 ### 4. 03_02_2022
@@ -104,12 +104,15 @@ Hence the idea - create an ETL automated pipeline that schedules meme uploads to
 - Read up on imgurpython calling methods and verified client authentication object works
 ### 5. 04_02_2022
 - Half done skeleton code for scheduling shell script
+### 6. 06_02_2022
+- Figured out the relevant API calls to make to IMGUR (for <i>extract.py</i>)
+- Reconsidered and removed some future enhancements
 
 
 # Future enhancements (for consideration)
 ## Extract
-- [ ] Possibly execute the commands using Postman (?)
+~~- [ ] Possibly execute the commands using Postman (?)~~ do not need postman anymore - completed with api requests
 ## Transform
 - [ ] Use K-means clustering to return the most dominant color for a given image (to pad the image)
 ## Load
-- [ ] Explore IG Basic API (future enhancement)
+~~- [ ] Explore IG Basic API (future enhancement)~~ will stick to web crawling method - do not want to infringe any TOS, and it is not sustainable to constantly update IG tokens (especially so, since it is not considered "open source" or free anymore)
