@@ -97,7 +97,7 @@ Hence the idea - create an ETL automated pipeline that schedules meme uploads to
 - Cleaned <i>app_egress.py</i> code, added in argparse notations and organized the code into main and function methods for better clarity. This also enables iteration of strings (and hence multiple jpeg files) when called upon by an external program (probably a bash script: can call Extract, Transform, and Egress in sequence)
 - Created an IMGUR account and started to get familiar with the structure
 - Downloaded existing memes into local <i>C:\\</i> and removed them from google photos
-- Completed skeleton code of app_transform.py
+- Completed skeleton code of <i>app_transform.py</i>
 - Cleaned <i>app_transform.py</i> code, added in argparse and iterative behaviour and saving to output file directories with iterative file names
 ### 4. 03_02_2022
 - Starting building skeleton code for app_extract.py
@@ -105,7 +105,7 @@ Hence the idea - create an ETL automated pipeline that schedules meme uploads to
 ### 5. 04_02_2022
 - Half done skeleton code for scheduling shell script
 ### 6. 06_02_2022
-- Figured out the relevant API calls to make to IMGUR (for <i>extract.py</i>)
+- Figured out the relevant API calls to make to IMGUR (<i>extract.py</i>), and drafted the flow
 - Reconsidered and removed some future enhancements
 
 
