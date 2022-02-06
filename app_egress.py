@@ -73,6 +73,15 @@ def sleep_timer(a: int, b: str = 'print', c: str = 'debug') -> None:
 			return "syntax error: c needs to be specified properly"
 	return
 
+def list_of_memes(transform_dir: str)->list:
+	"""
+	Inputs the transform directory and returns a list of the absolute paths to all the memes
+	"""
+	meme_list=list()
+	for i in os.listdir(transform_dir):
+		meme_list.append(os.path.join(transform_dir,i))
+	return meme_list
+
 
 ### Initialize variables ###
 # Login variables
@@ -137,6 +146,7 @@ def login_ig_home_page()->tuple:
 	print('Using selenium explicit waits to close IG login pop-ups')
 	print('Closing pop-up that requests to save login info')
 	wait.until(EC.element_to_be_clickable((By.XPATH, "//button[@class='sqdOP yWX7d    y3zKF     ']"))).click()
+	sleep_timer(3)
 	print('Closing pop-up that asks to add IG to home page')
 	wait.until(EC.element_to_be_clickable((By.XPATH, "//button[@class='aOOlW   HoLwm ']"))).click()
 
@@ -145,7 +155,7 @@ def login_ig_home_page()->tuple:
 
 	return (driver, wait)
 
-def post_ig_story(parent_dir: str, file_name: str, driver: object, wait: object)->None:
+def post_ig_story(parent_dir: str, file_name: str, driver: object, wait: object, i: int)->None:
 	"""
 	From IG home page, post IG story
 	parent_dir: Parent directory as a string
@@ -169,15 +179,24 @@ def post_ig_story(parent_dir: str, file_name: str, driver: object, wait: object)
 	print('Executing other keyboard modules')
 	pyautogui.click(x=screensize[0]/2, y=screensize[1]/2)
 	sleep_timer(3)
-	pyautogui.hotkey('ctrl','shift','j', interval=3)
-	pyautogui.hotkey('ctrl','shift','m',interal=3)
+	if i == 0:
+		pyautogui.hotkey('ctrl','shift','j', interval=3)
+		pyautogui.hotkey('ctrl','shift','m',interal=3)
 	wait.until(EC.element_to_be_clickable((By.XPATH, "//button[@class='sqdOP yWX7d    y3zKF     ']"))).click()
 
-	print('Upload button selected. Wait for {} seconds'.format(4))
-	sleep_timer(4)
-	return
+	print('Upload button selected. Wait for {} seconds'.format(10))
+	sleep_timer(10)
 
-def close_selenium(timeout: int)->None:
+	# Returning back to home screen
+	if i ==0: 
+		print('Closing a pop-up that asks to turn on notifications')
+		wait.until(EC.element_to_be_clickable((By.XPATH, "//button[@class='aOOlW   HoLwm ']"))).click()
+
+	time.sleep(5)
+
+	return driver
+
+def close_browser(driver: object, timeout: int)->None:
 	"""
 	Calls sleep_timer function. Before a given timeout, closes selenium webdriver
 	"""
@@ -189,14 +208,24 @@ def close_selenium(timeout: int)->None:
 if __name__=="__main__":
 
 	# Parse arguments
-	my_parser = argparse.ArgumentParser(prog='app_egress.py', description='Upload Image to IG Story', usage='%(prog)s "${strings_of_file_paths[@]}"')
-	my_parser.add_argument("meme_absolute_file_paths", help="Array consisting of absolute paths to image files as strings. Use backslash for windows file paths", type=str, nargs='+')
+	my_parser = argparse.ArgumentParser(prog='app_egress.py', description='Upload Image to IG Story', usage='%(prog)s transform_dir')
+	my_parser.add_argument("transform_dir", help="Path to transform directory containing resized memes", type=str)
 	my_args = my_parser.parse_args()
+
+	# Get list of memes
+	meme_list = list_of_memes(my_args.transform_dir)
 
 	# Application Start
 	webdr_object, webdr_wait_object = login_ig_home_page()
-	for i in my_args.meme_absolute_file_paths:
-		parent_dir=os.path.split(i)[0]
-		file_name=os.path.split(i)[1]
-		post_ig_story(parent_dir, file_name, webdr_object, webdr_wait_object)
-	close_selenium()
+	for i in range(len(meme_list)):
+
+
+		file_path=meme_list[i]
+		parent_dir=os.path.split(file_path)[0]
+		file_name=os.path.split(file_path)[1]
+
+		print(parent_dir)
+		print(file_name)
+
+		driver = post_ig_story(parent_dir, file_name, webdr_object, webdr_wait_object, i)
+	close_browser(driver, 3)
