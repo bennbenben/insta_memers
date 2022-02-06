@@ -69,7 +69,7 @@ Hence the idea - create an ETL automated pipeline that schedules meme uploads to
 - [x] Compile my personal memes (from various sources) into one folder
 - [x] Create IMGUR account
 - [ ] Upload my personal memes into IMGUR (limit is 50 per day)
-- [ ] Skeleton code for scheduling shell script
+- [x] Skeleton code for scheduling shell script
 ### Extract
 - [x] Explore IMGUR API, especially commands to: {download images, delete images from album, upload images from album}
 - [ ] Build skeleton code
