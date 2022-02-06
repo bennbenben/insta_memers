@@ -68,7 +68,7 @@ Hence the idea - create an ETL automated pipeline that schedules meme uploads to
 ### Preparation
 - [x] Compile my personal memes (from various sources) into one folder
 - [x] Create IMGUR account
-- [ ] Upload my personal memes into IMGUR (limit is 50 per day)
+- [x] Upload my personal memes into IMGUR (not sure what is the limit)
 - [x] Skeleton code for scheduling shell script
 ### Extract
 - [x] Explore IMGUR API, especially commands to: {download images, delete images from album, upload images from album}
@@ -108,6 +108,7 @@ Hence the idea - create an ETL automated pipeline that schedules meme uploads to
 - Figured out the relevant API calls to make to IMGUR (<i>extract.py</i>), and drafted the flow
 - Reconsidered and removed some future enhancements
 - Successfully complete one run to upload 2 memes
+- Uploaded personal memes stash into IMGUR and facing status code 403 when accessing the site. Time to take a short break and email their support
 
 
 # Future enhancements (for consideration)
