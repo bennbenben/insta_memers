@@ -72,7 +72,7 @@ Hence the idea - create an ETL automated pipeline that schedules meme uploads to
 - [x] Skeleton code for scheduling shell script
 ### Extract
 - [x] Explore IMGUR API, especially commands to: {download images, delete images from album, upload images from album}
-- [ ] Build skeleton code
+- [x] Build skeleton code
 ### Transform
 - [x] Explore Python libraries to perform image operations: {resizing, padding, make collages}
 - [x] Build skeleton code
@@ -107,6 +107,7 @@ Hence the idea - create an ETL automated pipeline that schedules meme uploads to
 ### 6. 06_02_2022
 - Figured out the relevant API calls to make to IMGUR (<i>extract.py</i>), and drafted the flow
 - Reconsidered and removed some future enhancements
+- Successfully complete one run to upload 2 memes
 
 
 # Future enhancements (for consideration)
