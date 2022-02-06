@@ -109,6 +109,9 @@ Hence the idea - create an ETL automated pipeline that schedules meme uploads to
 - Reconsidered and removed some future enhancements
 - Successfully complete one run to upload 2 memes
 - Uploaded personal memes stash into IMGUR and facing status code 403 when accessing the site. Probably because uploading ~750++ images at once exceeded the known quota of 50 per hour. Time to take a short break and email their support
+### 7. 07_02_2022
+- Created a shell script and corresponding test file to upload memes via API, however seems like imgur has not unblocked me yet
+- Will take a few days break
 
 
 # Future enhancements (for consideration)
